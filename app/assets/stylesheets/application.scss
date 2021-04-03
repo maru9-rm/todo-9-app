@@ -1,0 +1,71 @@
+
+@import 'header';
+
+// 共通部分　＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+body {
+    margin: 0;
+}
+
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    font-family: Avenir;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+img {
+    width: 100%;
+}
+
+
+.block {
+    background-color: #f4f4f4;
+    height: 160px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    position: relative;
+
+    &-title {
+        padding-top: 20px;
+        font-family: Avenir;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        width: 80%;
+    }
+
+    &-content {
+        font-family: Avenir;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+
+        color: #000000;
+
+        mix-blend-mode: normal;
+        opacity: 0.4;
+    }
+}
+
+.new-block {
+    background: #FFFFFF;
+    border: 1px dashed rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+
+    p {
+        line-height: 160px;
+        margin: 0;
+    }
+}
+

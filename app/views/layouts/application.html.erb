@@ -7,9 +7,23 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="header-left">
+        <%= link_to 'Boards', root_path %>
+      </div>
+      <div class="header-right">
+        <%= image_tag 'Oval.png', class: 'user-icon'%>
+      </div>
+
+    
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
