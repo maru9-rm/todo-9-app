@@ -7,3 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+Board.create({title: 'test1', content: 'testtesttesttesttesttest'})
+Board.create({title: 'test2', content: 'testtesttesttesttesttest'})
+Board.create({title: 'test3', content: 'testtesttesttesttesttest'})
+Board.create({title: 'test4', content: 'testtesttesttesttesttest'})
