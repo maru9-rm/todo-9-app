@@ -1,1 +1,20 @@
-<%= @title %>
+<h2>Edit Board</h2>
+<ul>
+	<% @board.errors.full_messages.each do |message| %>
+		<li class="errors"><%= message %></li>
+    <% end %>
+</ul>
+
+
+<%= form_with(model: @board, url: board_path, method: 'put', local: true) do |f|%>
+    <div class="field">
+        <%= f.label :title, 'Name' %> <br>
+        <%= f.text_field :title, class: 'form' %>
+    </div>
+    <div class="field">
+        <%= f.label :content, 'Description' %> <br>
+        <%= f.text_area :content, class: 'form' %>
+    </div>
+    <%= f.submit 'Submit' , class: 'form btn'%>
+
+<% end %>

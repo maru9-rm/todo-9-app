@@ -23,6 +23,13 @@
     
     </header>
     <div class="container">
+      <% if flash.present? %>
+        <div class="flash">
+          <% flash.each do |key, value| %>
+            <div class="<%= key %>"><%= value %></div>
+          <% end %>
+        </div>
+      <% end %>
       <%= yield %>
     </div>
   </body>
