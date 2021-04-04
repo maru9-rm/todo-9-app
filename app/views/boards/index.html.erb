@@ -1,6 +1,6 @@
 <h2>All Boards</h2>
 <% @boards.each do |board| %>
-    <%= link_to root_path do%>
+    <%= link_to board_path(id: board.id) do%>
         <div class="block board">
             <div class="block-title">
                 <h3><%= board.title %></h3>
