@@ -1,1 +1,14 @@
-<%= @title %>
+<h2>New Board</h2>
+
+<%= form_with(model: @board, url: boards_path, method: 'post', local: true) do |f|%>
+    <div class="field">
+        <%= f.label :title, 'Name' %> <br>
+        <%= f.text_field :title, class: 'form' %>
+    </div>
+    <div class="field">
+        <%= f.label :content, 'Description' %> <br>
+        <%= f.text_area :content, class: 'form' %>
+    </div>
+    <%= f.submit 'Submit' , class: 'form btn'%>
+
+<% end %>
