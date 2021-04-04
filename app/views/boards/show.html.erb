@@ -1,15 +1,22 @@
 <h2><%= @board.title %></h2>
 
-<%= link_to root_path do%>
-    <div class="block board">
-        <div class="block-title">
+<div class="block board">
+    <div class="block-title">
+        <%= link_to root_path do%>
             <h3>task title</h3>
-        </div>
-        <div class="block-content">
-            <p>task content</p>
+        <% end %>
+    </div>       
+    <div class="block-content">
+        <p>task content</p>
+    </div>
+    <div class="menu-btn dropdown">
+        <%= image_tag 'Combined Shape.png' %>
+        <div class="dropdown-menu">
+            <%= link_to 'Edit', root_path %>
+            <%= link_to 'Delete', root_path %>
         </div>
     </div>
-<% end %>
+</div>
 
 
 <%= link_to root_path do %>

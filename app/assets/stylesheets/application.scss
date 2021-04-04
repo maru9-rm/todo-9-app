@@ -1,6 +1,7 @@
 
 @import 'header';
 @import 'form';
+@import 'flash';
 
 // 共通部分　＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 body {
@@ -25,7 +26,23 @@ img {
     width: 100%;
 }
 
+ul {
+    padding: 0;
+}
 
+li {
+    list-style: none;
+    font-size: 20px;
+}
+
+.errors {
+    
+    color: red;   
+}
+
+
+
+// block関連 **************************************
 .block {
     background-color: #f4f4f4;
     height: 160px;
@@ -56,6 +73,10 @@ img {
         mix-blend-mode: normal;
         opacity: 0.4;
     }
+
+    img {
+        cursor: pointer;
+    }
 }
 
 .new-block {
@@ -70,3 +91,37 @@ img {
     }
 }
 
+// ドロップダウンメニュー関連 ********************************::after
+
+.menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 10px;
+    img {
+        width: 25px;
+    }
+
+}
+
+
+.dropdown {
+
+    &-menu {
+        display: none;
+    }
+
+}
+
+.dropdown:hover .dropdown-menu {
+    background-color: white;
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 5px;
+    text-align: center;
+    align-items: center;
+    padding: 5px 15px;
+
+}

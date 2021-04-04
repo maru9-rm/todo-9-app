@@ -1,15 +1,22 @@
 <h2>All Boards</h2>
 <% @boards.each do |board| %>
-    <%= link_to board_path(id: board.id) do%>
-        <div class="block board">
-            <div class="block-title">
+    <div class="block board">
+        <div class="block-title">
+            <%= link_to board_path(board) do%>
                 <h3><%= board.title %></h3>
-            </div>
-            <div class="block-content">
-                <p><%= board.content %></p>
+            <% end %>
+        </div>
+        <div class="block-content">
+            <p><%= board.content %></p>
+        </div>
+        <div class="menu-btn dropdown">
+            <%= image_tag 'Combined Shape.png' %>
+            <div class="dropdown-menu">
+                <%= link_to 'Edit', edit_board_path(board) %>
+                <%= link_to 'Delete', root_path %>
             </div>
         </div>
-    <% end %>
+    </div>
 <% end %>
 
 <%= link_to new_board_path do %>

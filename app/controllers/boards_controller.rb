@@ -15,15 +15,26 @@ class BoardsController < ApplicationController
     def create
         @board = Board.new(board_params)
         if @board.save
-            redirect_to board_path(@board)
+            redirect_to board_path(@board), notice: 'Successfully saved'
         else
+            flash.now[:error] = 'Failed to save'
             render :new
         end
     end
 
 
     def edit
-        @title = 'デイトラ'
+        @board = Board.find(params[:id])
+    end
+
+    def update
+        @board = Board.find(params[:id])
+        if @board.update(board_params)
+            redirect_to board_path(@board), notice: 'Successfully changed'
+        else
+            flash.now[:error] = 'Failed to change'
+            render :edit
+        end
     end
 
 
