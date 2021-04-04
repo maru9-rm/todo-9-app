@@ -13,7 +13,7 @@
             <%= image_tag 'Combined Shape.png' %>
             <div class="dropdown-menu">
                 <%= link_to 'Edit', edit_board_path(board) %>
-                <%= link_to 'Delete', root_path %>
+                <%= link_to 'Delete', board_path(board), data: { method: 'delete', confirm: 'Do you really want to delete?' } %>
             </div>
         </div>
     </div>
