@@ -6,11 +6,12 @@
         %h3= board.title
     .block-content
       %p= board.content
-    .menu-btn.dropdown
-      = image_tag 'Combined Shape.png'
-      .dropdown-menu
-        = link_to 'Edit', edit_board_path(board)
-        = link_to 'Delete', board_path(board), data: { method: 'delete', confirm: 'Do you really want to delete?' }
+    - if user_signed_in? && current_user.boards.exists?(id: board.id)
+      .menu-btn.dropdown
+        = image_tag 'Combined Shape.png'
+        .dropdown-menu
+          = link_to 'Edit', edit_board_path(board)
+          = link_to 'Delete', board_path(board), data: { method: 'delete', confirm: 'Do you really want to delete?' }
 = link_to new_board_path do
   .block.new-block
     %p + Add new borad
