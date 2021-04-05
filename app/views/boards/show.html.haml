@@ -10,6 +10,6 @@
     .dropdown-menu
       = link_to 'Edit', root_path
       = link_to 'Delete', root_path
-= link_to root_path do
+= link_to new_board_task_path(@board) do
   .block.new-block
     %p + Add new task
