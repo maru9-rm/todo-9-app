@@ -2,6 +2,7 @@
 @import 'header';
 @import 'form';
 @import 'flash';
+@import 'button';
 
 // 共通部分　＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 body {
@@ -123,5 +124,11 @@ li {
     text-align: center;
     align-items: center;
     padding: 5px 15px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
 
+}
+
+.dropdown:hover .log-out-btn {
+    right: 20px;
+    top: 45px;
 }
