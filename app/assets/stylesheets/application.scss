@@ -97,7 +97,7 @@ li {
 .menu-btn {
     position: absolute;
     top: 30px;
-    right: 30px;
+    right: 15px;
     padding: 10px;
     img {
         width: 25px;
@@ -107,7 +107,6 @@ li {
 
 
 .dropdown {
-
     &-menu {
         display: none;
     }
