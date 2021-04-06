@@ -45,6 +45,12 @@ li {
     margin-top: 5px;
 }
 
+.eyecatch {
+    border-radius: 8px;
+    margin-bottom: 35px;
+}
+
+
 // block関連 **************************************
 .block {
     background-color: #f4f4f4;
@@ -99,6 +105,14 @@ li {
     p {
         line-height: 50px;
     }
+}
+
+
+.task-content {
+    height: auto;
+    padding-top: 5px ;
+    padding-bottom: 5px;
+    margin-bottom: 35px;
 }
 
 
@@ -165,3 +179,5 @@ li {
         width: 40px;
     }
 }
+
+

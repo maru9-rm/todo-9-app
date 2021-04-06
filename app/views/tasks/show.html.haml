@@ -1,7 +1,10 @@
 %h2= @task.title
 
+-if @task.eyecatch.attached?
+    = image_tag @task.eyecatch, class: 'eyecatch'
 
-.block
+
+.block.task-content
     %p= @task.content
 
 %h2.comment
@@ -10,7 +13,7 @@
 - @comments.each do |comment|
     .comment-wrapper 
         .comment-user 
-            -# = image_tag comment.user.avatar_image
+            = image_tag comment.user.avatar_image
         .comment-content
             = comment.content
 
