@@ -1,0 +1,19 @@
+%h2= @task.title
+
+
+.block
+    %p= @task.content
+
+%h2.comment
+    Comment
+
+- @comments.each do |comment|
+    .comment-wrapper 
+        .comment-user 
+            -# = image_tag comment.user.avatar_image
+        .comment-content
+            = comment.content
+
+= link_to new_board_task_comment_path(@task.board_id,@task.id) do
+    .block.new-block.new-comment
+        %p + Add new comment
