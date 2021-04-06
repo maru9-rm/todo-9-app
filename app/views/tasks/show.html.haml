@@ -1,0 +1,21 @@
+%h2= @task.title
+
+
+.block
+    %p= @task.content
+-# - @tasks.each do |task|
+-#   .block.board
+-#     .block-title
+-#       = link_to board_task_path(task) do
+-#         %h3= task.title
+-#     .block-content
+-#       %p= task.content
+-#     - if user_signed_in? && current_user.tasks.exists?(id: task.id)
+-#       .menu-btn.dropdown
+-#         = image_tag 'Combined Shape.png'
+-#         .dropdown-menu
+-#           = link_to 'Edit', edit_board_task_path(task)
+-#           = link_to 'Delete', board_task_path(task), data: { method: 'delete', confirm: 'Do you really want to delete?' }
+-# = link_to new_board_task_path(@board.id) do
+-#   .block.new-block
+-#     %p + Add new task
