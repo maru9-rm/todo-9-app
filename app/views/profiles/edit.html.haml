@@ -1,1 +1,19 @@
-edit 
+%h2 Your Profile
+%ul
+    - @profile.errors.full_messages.each do |message|
+        %li.errors= message
+= form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
+    .field
+        = f.label :name, 'Name'
+        %br/
+        = f.text_field :name, class: 'form'
+    .field
+        = f.label :avatar, 'Avatar'
+        %br/
+        = f.file_field :avatar, class: 'mt-5'
+
+    = f.submit 'Submit' , class: 'form btn'
+
+
+
+
