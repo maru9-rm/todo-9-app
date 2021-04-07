@@ -6,6 +6,8 @@
         %h3= board.title
     .block-content
       %p= board.content
+    .user-icon-blockmaker
+      = image_tag board.user.avatar_image, class: 'user-icon'
     - if user_signed_in? && current_user.boards.exists?(id: board.id)
       .menu-btn.dropdown
         = image_tag 'Combined Shape.png'

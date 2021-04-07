@@ -19,4 +19,5 @@ class Board < ApplicationRecord
     validates :content, length: { minimum: 10, maximum: 50 }
     belongs_to :user
     has_many :tasks
+
 end
