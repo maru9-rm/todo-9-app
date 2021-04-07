@@ -22,6 +22,7 @@ class Task < ApplicationRecord
     has_many :comments, dependent: :destroy
     validates :title, presence: true
     validates :content, presence: true
+    validates :content, length: { minimum: 2, maximum: 100 }
     has_one_attached :eyecatch
 
 end

@@ -18,4 +18,5 @@ class Comment < ApplicationRecord
     belongs_to :user
     belongs_to :task
     validates :content, presence: true
+    validates :content, length: { maximum: 100 }
 end
