@@ -50,24 +50,28 @@ li {
     margin-bottom: 35px;
 }
 
+.board-show-eyecatch {
+    margin-bottom: 0;
+}
+
 
 // block関連 **************************************
 .block {
     background-color: #f4f4f4;
-    height: 160px;
+    min-height: 160px;
     border-radius: 10px;
     margin-bottom: 20px;
-    padding: 0 20px;
+    padding: 20px 20px;
     position: relative;
 
     &-title {
-        padding-top: 20px;
         font-family: Avenir;
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
         line-height: 25px;
         width: 80%;
+
     }
 
     &-content {
@@ -81,6 +85,10 @@ li {
 
         mix-blend-mode: normal;
         opacity: 0.4;
+
+        p {
+            margin-bottom: 70px;
+        }
     }
 
     img {
@@ -101,7 +109,9 @@ li {
 }
 
 .new-comment {
-    height: 50px;
+    min-height: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
     p {
         line-height: 50px;
     }
@@ -113,6 +123,15 @@ li {
     padding-top: 5px ;
     padding-bottom: 5px;
     margin-bottom: 35px;
+
+}
+
+.user-icon-blockmaker {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
 }
 
 
@@ -128,6 +147,18 @@ li {
     }
 
 }
+
+
+.task-menu-btn {
+    position: absolute;
+    top: 75px;
+    right: 15px;
+    padding: 10px;
+    img {
+        width: 25px;
+    }
+}
+
 
 
 .dropdown {
@@ -181,3 +212,25 @@ li {
 }
 
 
+.comment-count {
+
+    position:absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        color: rgba(0, 0, 0, 0.2);
+        font-family: Avenir;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+    img {
+        width: 19px;
+    }
+}
