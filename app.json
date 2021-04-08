@@ -1,0 +1,16 @@
+{
+    "name": "todo9app",
+    "description": "This is todo9app",
+    "keywords": [],
+    "website": "",
+    "repository": "https://github.com/maru9-rm/todo-9-app",
+    "env": {},
+    "addons": [
+      "heroku-postgresql:hobby-dev"
+    ],
+    "buildpacks": [{
+      "url": "heroku/nodejs"
+    }, {
+      "url": "heroku/ruby"
+    }]
+  }
