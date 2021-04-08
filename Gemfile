@@ -30,7 +30,8 @@ gem 'annotate'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'devise'
-
+gem 'dotenv-rails'
+gem 'aws-sdk-s3', require: false
 
 
 # Reduces boot times through caching; required in config/boot.rb
